@@ -167,11 +167,11 @@ return [
         /*
          * Application Service Providers...
          */
-        tplab\Providers\AppServiceProvider::class,
-        tplab\Providers\AuthServiceProvider::class,
-        // tplab\Providers\BroadcastServiceProvider::class,
-        tplab\Providers\EventServiceProvider::class,
-        tplab\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
     ],
 

@@ -17,9 +17,9 @@ class Posts extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->integer('usr_id');
-            $table->DateTime('date');
+            $table->text('body');
             $table->Boolean('state');
+            $table->timestamps();
         });
 
     }

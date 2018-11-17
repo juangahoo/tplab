@@ -25,7 +25,7 @@
 		<div class="head-top">
 			<div class="logo">
 			
-				<h1><a href="index.html"><span> G</span>ames <span>C</span>enter</a></h1>
+				<h1><a href="index.html"><span> L</span>os <span>J</span>uegos <span>D</span>e <span>R</span>icky</a></h1>
 				
 			</div>
 		<div class="top-nav">		
