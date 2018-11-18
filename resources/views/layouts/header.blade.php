@@ -13,7 +13,7 @@
 						<input type="submit" value="" >
 					</form>
 				</div>
-			
+
 				<div class="clearfix"> </div>
 		</div>
 		</div>
@@ -36,6 +36,10 @@
 						<li><a class="color2" href="games.html"  >Games</a></li>
 						<li><a class="color5" href="blog.html"  >Blog</a></li>
 						<li><a class="color6" href="contact.html" >Contact</a></li>
+						@if (Auth::check())
+							<li><a class="color6" href="nombre.html" >{{ Auth::user()->name }}</a></li>
+						@endif
+						
 						<div class="clearfix"> </div>
 					</ul>
 

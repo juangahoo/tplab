@@ -7,6 +7,11 @@
         <header class="card-header text-center">
             <h1 class="card-title">{{ $post->title }}</h1>
         </header>
+        
+        <p class="blg-post-meta">
+            {{ $post->user->name }} &nbsp; | &nbsp;
+            {{ $post->created_at->toFormattedDateString() }}
+        </p>
 
         <br>
 
