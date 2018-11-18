@@ -18,7 +18,7 @@
             <textarea id="body" class="form-control" name="body"></textarea>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-default">Publicar</button>
+            <button type="submit" class="btn btn-primary">Publicar</button>
         </div>
 
         @include('layouts.errors')

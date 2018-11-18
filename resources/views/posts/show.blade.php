@@ -19,6 +19,49 @@
                 {{ $post->body }}
         </div>
 
+        <hr>
+
+        <h3>Comentarios:</h3>
+
+        <br>
+
+        <div class="comments">
+            <ul class="list-group">
+
+                @foreach ($post->comments as $comment)
+                    
+                    <li class="list-group-item">
+                        <strong>
+                                {{ $comment->created_at->diffForHumans() }}: &nbsp;
+                        </strong>
+
+                            {{ $comment->body }}
+                    </li>
+
+                @endforeach
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="card">
+            <div class="card-block">
+                <form method="POST" action="/posts/{{ $post->id }}/comments">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <textarea name="body" placeholder="Escribe aquí tu comentario." class="form-control" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" style="float:right">Añadir comentario</button>
+                    </div>
+                </form>
+
+                @include ('layouts.errors')
+
+            </div>
+        </div>
+
     </div>
     <hr>
 
