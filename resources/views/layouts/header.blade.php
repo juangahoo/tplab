@@ -3,9 +3,13 @@
 		<div class="container">
 		<div class="top-head" >	
 			<ul class="header-in">
-				<li ><a href="#" >  Help</a></li>
-				<li><a href="contact.html">   Contact Us</a></li>
-				<li ><a href="#" >   How To Use</a></li>
+				@if (Auth::check())
+					<li ><a href="/logout" >Cerrar sesión</a></li>
+				@else
+					<li ><a href="/login" >Ingresar</a></li>
+					<li ><a href="/register" >Registrarse</a></li>
+				@endif
+				<li><a href="mailto:los.juegos.de.ricky@gmail.com">Contáctenos</a></li>
 			</ul>
 				<div class="search">
 					<form>
