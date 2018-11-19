@@ -27,19 +27,19 @@
 		<div class="header-top">
 		<div class="container">
 		<div class="head-top">
+			<img src="/images/logo_ricky.png" alt="logo de Ricky" width="50px" height="50px" style="float:left; margin-right:5px">
 			<div class="logo">
-			
-				<h1><a href="index.html"><span> L</span>os <span>J</span>uegos <span>D</span>e <span>R</span>icky</a></h1>
+
+				<h1 style="margin-top:7px"><a href="/"><span> L</span>os <span>J</span>uegos <span>D</span>e <span>R</span>icky</a></h1>
 				
 			</div>
 		<div class="top-nav">		
 			  <span class="menu"><img src="/images/menu.png" alt=""> </span>
 				
 					<ul>
-						<li class="active"><a class="color1" href="index.html"  >Home</a></li>
-						<li><a class="color2" href="games.html"  >Games</a></li>
-						<li><a class="color5" href="blog.html"  >Blog</a></li>
-						<li><a class="color6" href="contact.html" >Contact</a></li>
+						<li class="active"><a class="color1" href="/">Home</a></li>
+						<li><a class="color2" href="https://store.steampowered.com/?l=spanish" target="_blank">Juegos "No Gratis"</a></li>
+						<li><a class="color6" href="mailto:los.juegos.de.ricky@gmail.com" >Contáctenos</a></li>
 						@if (Auth::check())
 							<li><a class="color6" href="nombre.html" >{{ Auth::user()->name }}</a></li>
 						@endif

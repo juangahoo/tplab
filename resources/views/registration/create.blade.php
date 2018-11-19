@@ -3,8 +3,8 @@
 @section('content')
 
     <div class="container">
+        <br>
         <h1>Registrarse</h1>
-
         <br>
 
         <form method="POST" action="/register">
@@ -38,5 +38,6 @@
 
         </form>
     </div>
+    <br>
 
 @endsection

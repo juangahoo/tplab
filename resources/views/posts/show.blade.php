@@ -49,23 +49,31 @@
 
         <hr>
 
-        <div class="card">
-            <div class="card-block">
-                <form method="POST" action="/posts/{{ $post->id }}/comments">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <textarea name="body" placeholder="Escribe aquí tu comentario." class="form-control" required></textarea>
-                    </div>
+        @if (Auth::check())
+		
+            <div class="card">
+                <div class="card-block">
+                    <form method="POST" action="/posts/{{ $post->id }}/comments">
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            <textarea name="body" placeholder="Escribe aquí tu comentario." class="form-control" required></textarea>
+                        </div>
 
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary" style="float:right">Añadir comentario</button>
-                    </div>
-                </form>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" style="float:right">Añadir comentario</button>
+                        </div>
+                    </form>
 
-                @include ('layouts.errors')
+                    @include ('layouts.errors')
 
+                </div>
             </div>
-        </div>
+            
+        @else
+            <div class="alert alert-info">
+                <h5>Para poder escribir comentarios debes estar registrado y logueado en la página.</h5>
+            </div>
+        @endif
 
     </div>
     <hr>
