@@ -8,13 +8,13 @@ class Comment extends Model
     
     public function post(){
 
-        return $this->belogsTo(Post::class);
+        return $this->belongsTo(Post::class);
 
     }
 
     public function user(){
 
-        return $this->belogsTo(User::class);
+        return $this->belongsTo(User::class);
 
     }
 

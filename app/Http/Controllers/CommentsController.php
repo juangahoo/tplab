@@ -12,9 +12,9 @@ class CommentsController extends Controller
 {
     public function store(Post $post){
 
-        $this->validate(request(), ['body' => 'required']);
+        $this->validate(request(), ['body' => 'required|min:2|max:1000']);
 
-        $post->addComment(request('body'));
+        $post->addComment(request('body'), $post);
 
         return back();
     }

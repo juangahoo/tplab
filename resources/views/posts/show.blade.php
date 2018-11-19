@@ -30,13 +30,14 @@
 
         <br>
 
-        <div class="comments">
+        <div class="comments" style="text-align:left">
             <ul class="list-group">
 
                 @foreach ($post->comments as $comment)
                     
                     <li class="list-group-item">
                         <strong>
+                                {{ $comment->user->name }}
                                 {{ $comment->created_at->diffForHumans() }}: &nbsp;
                         </strong>
 
@@ -63,8 +64,10 @@
                             <button type="submit" class="btn btn-primary" style="float:right">Añadir comentario</button>
                         </div>
                     </form>
-
+                    <br>
+                    <br>
                     @include ('layouts.errors')
+                    
 
                 </div>
             </div>
