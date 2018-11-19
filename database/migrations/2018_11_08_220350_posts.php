@@ -19,6 +19,7 @@ class Posts extends Migration
             $table->integer('user_id');
             $table->string('title');
             $table->text('body');
+            $table->string('image', 128)->nullable();
             $table->Boolean('state')->default('1');
             $table->timestamps();
         });

@@ -8,8 +8,8 @@
 
 <div class="content">
 	<div class="container">
-        <div class="content-top">
-            <h2 class="new">NEW GAMES</h2>
+        <div class="content-top" style="text-align:center">
+            <h2 class="new">ÚLTIMOS JUEGOS</h2>
         
 			<div class="wrap">	
 			    <div class="main">
@@ -38,10 +38,9 @@
 	<div class="col-mn">
 		<div class="container">
 				<div class="col-mn2">
-					<h3>The Best Features</h3>
-					<p>Contrary to popular belief
-						, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-					<a class=" more-in" href="single.html">Read More</a>
+					<h3>Los mejores juegos</h3>
+					<br>
+					<p>Los juegos de Ricky, la mejor página en dónde encontrarás los ultimos juegos disponibles para descargar desde los mejores servidores.</p>
 			</div>
 		</div>
 	</div>

@@ -206,10 +206,11 @@ h2.new{
  h2.new:after, h2.new:before{
 	content:"";
 	background:#8FBF00;
-	width:489px;
+	width:40%;
 	height:2px;
 	display:inline-block;
-	  vertical-align: middle;
+		vertical-align: middle;
+		text-align: center;
 	    margin:0 10px 0 0;
 }
  h2.new:after{
