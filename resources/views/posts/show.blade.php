@@ -14,8 +14,11 @@
         </p>
 
         <br>
+        @if ($post->file)
 
-        <img class="card-img" src="/images/thumbs/1.jpg" alt="">
+        <img class="card-img" src="{{ $post->file }}" alt="imagen del post">
+            
+        @endif
 
         <br>
         <br>

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
 {
@@ -26,17 +26,19 @@ class PostsController extends Controller
         return view('posts.create');
     }
 
-    public function store(){
+    public function store(Post $post, Request $request){
 
         $this->validate(request(), [
             'title' => 'required', 
-            'body' => 'required'
+            'body' => 'required',
+            'file' => 'nullable'
         ]);
+        
+        
 
         auth()->user()->publish(
-            new Post(request(['title', 'body']))
+            new Post(request(['title', 'body', 'file']))
         );
-
 
         return redirect('/');
     }
