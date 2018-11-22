@@ -33,7 +33,7 @@ class PostsController extends Controller
             'body' => 'required',
             'file' => 'nullable'
         ]);
-        
+       
         
 
         auth()->user()->publish(
