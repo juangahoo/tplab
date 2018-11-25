@@ -2,12 +2,12 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container" style="background-color: #141417">
         <br>
-        <h1>Ingresar</h1>
+        <h1 style="color:#e8e7e3">Ingresar</h1>
         <br>
 
-        <form method="POST" action="/login">
+        <form method="POST" action="/login" style="color:#e8e7e3">
             {{ csrf_field() }}
 
             <div class="form-group">
@@ -21,7 +21,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Ingresar</button>
+                <button type="submit" class="btn btn-primary" style="background-color: #08538c">Ingresar</button>
                 <a class="btn btn-link" onclick="document.getElementById('aviso').innerHTML = 'Que lástima que te olvidaste la contraseña, porque esto todavía no funciona jajajaja.'"> 
                     {{ __('Olvidaste tu contraseña?') }}
                 </a>

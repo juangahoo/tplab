@@ -24,7 +24,8 @@
                         <div class="clearfix"> </div>
                     </ul>
                 </div>
-            </div>
+			</div>
+			<br>
         </div>
 
         <script src="/js/grid.js"></script>

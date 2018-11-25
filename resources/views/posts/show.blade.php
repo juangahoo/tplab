@@ -2,13 +2,14 @@
 
 @section('content')
 
-    <div class="container text-center">
+    <div class="container text-center" style="background-color: #141417">
+        <br>
 
         <header class="card-header text-center">
-            <h1 class="card-title">{{ $post->title }}</h1>
+            <h1 class="card-title" style="color:#e8e7e3">{{ $post->title }}</h1>
         </header>
         
-        <p class="blg-post-meta">
+        <p class="blg-post-meta" style="color:#e8e7e3">
             {{ $post->user->name }} &nbsp; | &nbsp;
             {{ $post->created_at->toFormattedDateString() }}
         </p>
@@ -23,17 +24,17 @@
         <br>
         <br>
 
-        <div class="card-body">
+        <div class="card-body" style="color:#e8e7e3">
                 {{ $post->body }}
         </div>
 
         <hr>
 
-        <h3>Comentarios:</h3>
+        <h3 style="color:#e8e7e3">Comentarios:</h3>
 
         <br>
 
-        <div class="comments" style="text-align:left">
+        <div class="comments" style="text-align:left; background-color: #141417">
             <ul class="list-group">
 
                 @foreach ($post->comments as $comment)

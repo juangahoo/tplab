@@ -5,7 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 body{
-	background:#fff;
+	background:#000000;
 	font-family: 'PT Sans', sans-serif;
 		
 }
@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5,h6,label,p{
 }
 /*----*/
 .top-header{
-	background:#8fbf00;
+	background:#08538c;
 	 
 }
 .search{
@@ -87,7 +87,7 @@ font-family: 'Montserrat Alternates', sans-serif;
 }
 .logo h1 a{
 	text-decoration: none;
-	color:#2d2d2d;
+	color:#979797;
 }
 .logo h1 a span{
 	text-decoration: none;
@@ -95,6 +95,8 @@ font-family: 'Montserrat Alternates', sans-serif;
 }
 .top-nav{
 	float:right;
+	border-radius: 4px;
+	background-color: #08538c
 }
 .top-nav ul li {
 	display:inline-block;
@@ -105,7 +107,7 @@ font-family: 'Montserrat Alternates', sans-serif;
 }
 .top-nav ul li  a {
 	display: inline-block;
-	color: #000;
+	color: #e2e2e2;
 	text-decoration: none;		
 	font-size: 1.1em;
 	padding:0.5em 1.3em;
@@ -132,7 +134,7 @@ font-family: 'Montserrat Alternates', sans-serif;
 	background:#FFE500;
 }
 .header-top {
-	background:#fff;
+	background:#000;
 	  padding: 2em 0 ;
 	    border-bottom: 1px solid #D3D2D2;
 }
@@ -146,7 +148,7 @@ font-family: 'Montserrat Alternates', sans-serif;
 	position: absolute;
 	right:0%;
 	top:0%;
-	background:#fff;
+	background:#11222b;
 }
 ul.wmuSliderPagination {
 	
@@ -199,7 +201,7 @@ ul.wmuSliderPagination {
 /*--//banner--*/
 /*--content--*/
 h2.new{
-	color:#000;
+	color:#fff;
 	font-size:1.5em;
 	  padding: 0 0.7em;
 }
@@ -309,7 +311,7 @@ a.comment i{
 /*--//content--*/
 /*--footer--*/
 .footer-middle{
-	background:#2d2d2d;
+	background:#1e2025;
 	padding:2em 0;
 }
 .footer-middle-in {

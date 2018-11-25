@@ -70,14 +70,13 @@
 	margin: 0 auto;
 	text-align: center;
 	width: 100%;
-
 }
 
 .og-grid li {
 	display: inline-block;
 	margin: 15px 0;
   vertical-align: top;
-  height: 250px;
+  height: auto;
   width: 24.75%;
   padding: 0px 15px;
 }
@@ -98,7 +97,7 @@
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-	border-bottom-color: #ddd;
+	border-bottom-color: #141417;
 	border-width: 15px;
 	left: 50%;
 	margin: -20px 0 0 -15px;
@@ -106,7 +105,7 @@
 
 .og-expander {
 	position: absolute;
-	background: #ddd;
+	background: #141417;
 	top: auto;
 	left: 0;
 	width: 97.5%;

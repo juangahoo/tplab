@@ -2,12 +2,12 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container" style="background-color: #141417">
         <br>
-        <h1>Registrarse</h1>
+        <h1 style="color:#e8e7e3">Registrarse</h1>
         <br>
 
-        <form method="POST" action="/register">
+        <form method="POST" action="/register" style="color:#e8e7e3">
             {{ csrf_field() }}
             
             <div class="form-group">
@@ -31,7 +31,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Registrarse</button>
+                <button type="submit" class="btn btn-primary" style="background-color: #08538c">Registrarse</button>
             </div>
 
             @include('layouts.errors')

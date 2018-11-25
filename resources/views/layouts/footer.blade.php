@@ -17,7 +17,7 @@
                     <ul>
                         <li><a href="#">Realmente no tenemos servicio al cliente pero si quiere puede hacer click acá</a></li>
                         <li><a href="mailto:los.juegos.de.ricky@gmail.com">Contáctenos</a></li>
-                        <li><a href="/posts/create">Cree un Post</a></li>
+                        <li><a href="/posts/create">Crear un Post</a></li>
                     </ul>
                 </div>
             <div class="footer-middle-in">
