@@ -93,6 +93,14 @@ class PostController extends Controller
         
         $post->fill($request->all())->save();
         
+        //Acá está el código con el que debería guardarse, pero me tira error de permisos.
+        /*
+        if($post->file){
+            $path = Storage::disk('public')->put('images', $post->file);
+            
+            $post->fill(['file' => asset('storage/' . $path)])->save();
+        }
+        */
 
         return redirect()->route('post.index', $post->id);
 
