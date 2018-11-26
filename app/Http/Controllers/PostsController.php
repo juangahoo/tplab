@@ -14,7 +14,7 @@ class PostsController extends Controller
     }
 
     public function index(){
-        $posts = Post::latest()->get();
+        $posts = Post::orderBy('created_at', 'DESC')->paginate(12);
         return view('posts.index', compact('posts'));
     }
 
@@ -26,7 +26,7 @@ class PostsController extends Controller
         return view('posts.create');
     }
 
-    public function store(Post $post, Request $request){
+    public function store(Request $request){
 
         $this->validate(request(), [
             'title' => 'required', 

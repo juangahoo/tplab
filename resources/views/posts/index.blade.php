@@ -21,12 +21,16 @@
                             
                         @endforeach
                         
-                        <div class="clearfix"> </div>
-                    </ul>
-                </div>
+						<div class="clearfix"> </div>
+						
+					</ul>
+				</div>
 			</div>
 			<br>
-        </div>
+			{{ $posts->render() }}
+		</div>
+		
+		
 
         <script src="/js/grid.js"></script>
 		<script>

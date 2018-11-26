@@ -43,7 +43,7 @@
 						<li><a class="color2" href="https://store.steampowered.com/?l=spanish" target="_blank">Juegos "No Gratis"</a></li>
 						<li><a class="color6" href="/posts/create" >Crear Post</a></li>
 						@if (Auth::check())
-							<li><a class="color6" href="#" >{{ Auth::user()->name }}</a></li>
+							<li><a class="color6" href="{{ route('post.index') }}" >{{ Auth::user()->name }}</a></li>
 						@endif
 						
 						<div class="clearfix"> </div>

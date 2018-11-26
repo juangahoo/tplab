@@ -32,4 +32,6 @@ Route::post('/login', [ 'as' => '/login', 'uses' => 'SessionsController@store'])
 Route::get('/logout', 'SessionsController@destroy');
 
 
+Route::resource('post', 'Admin\PostController');
+
 //Auth::routes();
