@@ -45,7 +45,7 @@ class User extends Authenticatable
         if($post->file){
             $path = Storage::disk('public')->put('images', $post->file);
             
-            $post->fill(['file' => asset($path)])->save();
+            $post->fill(['file' => asset('storage/' . $path)])->save();
         }
 
 

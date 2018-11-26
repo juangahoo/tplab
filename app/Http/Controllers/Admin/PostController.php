@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -89,8 +90,9 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $post = Post::find($id);
-
+        
         $post->fill($request->all())->save();
+        
 
         return redirect()->route('post.index', $post->id);
 
