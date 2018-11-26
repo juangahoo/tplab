@@ -7,7 +7,7 @@
 
     <hr>
 
-    <form style="color:#e8e7e3" method="POST" action="/posts" enctype="multipart/form-data">
+    {{ Form::model($post, ['route' => ['post.update', $post->id], 'method' => 'PUT']) }}
         {{ csrf_field() }}
         <div class="form-group">
             <label for="title">Título:</label>
@@ -25,10 +25,10 @@
             <button type="submit" class="btn btn-primary" style="background-color: #08538c">Publicar</button>
         </div>
 
-
         @include('layouts.errors')
 
-    </form>
+    {{ Form::close() }}
+
     <hr>
 </div>
 @endsection

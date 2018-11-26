@@ -19,10 +19,15 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'DESC')
-        ->where('user_id', auth()->user()->id)
-        ->paginate(12);
 
+        if (auth()->user()->permission == 'ADMIN') {
+            $posts = Post::orderBy('created_at', 'DESC')
+                ->paginate(12);
+        } else {
+            $posts = Post::orderBy('created_at', 'DESC')
+                ->where('user_id', auth()->user()->id)
+                ->paginate(12);
+        }
 
         return view('admin.posts.index', compact('posts'));
             
@@ -71,6 +76,7 @@ class PostController extends Controller
     {
         $post = Post::find($id);
         return view('admin.posts.edit', compact('post'));
+        
     }
 
     /**
@@ -86,7 +92,8 @@ class PostController extends Controller
 
         $post->fill($request->all())->save();
 
-        return redirect()->route('posts.edit', $post->id);
+        return redirect()->route('post.index', $post->id);
+
     }
 
     /**
