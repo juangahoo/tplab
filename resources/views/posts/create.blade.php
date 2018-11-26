@@ -19,7 +19,7 @@
             </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Contenido</label>
-            <textarea id="body" class="form-control" name="body"></textarea>
+            <textarea id="body" class="form-control" name="body" style="height:400px"></textarea>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary" style="background-color: #08538c">Publicar</button>

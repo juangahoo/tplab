@@ -8,7 +8,7 @@
             <div>
                 <div class="panel panel-default" style="border-color: #08538c">
                     <div class="panel-heading" style="background-color: #08538c; border-color: #08538c; color:#e8e7e3">
-                        Lista de Posts
+                        Mis Posts
                     </div>
                     <div class="panel-body" style="background-color: #141417; color:#e8e7e3">
                         <table class="table table-stripped">
@@ -34,11 +34,11 @@
                                         </a>
                                     </td>
                                     <td width="10px">
-                                            {{ Form::open(['route' => ['post.destroy', $post->id], 'method' => 'DELETE']) }}
-                                                <button class="btn btn-sm btn-danger">
-                                                    Eliminar
-                                                </button>
-                                            {{ Form::close() }}
+                                        {{ Form::open(['route' => ['post.destroy', $post->id], 'method' => 'DELETE']) }}
+                                            <button class="btn btn-sm btn-danger">
+                                                Eliminar
+                                            </button>
+                                        {{ Form::close() }}
                                     </td>
                                 </tr>
                                     

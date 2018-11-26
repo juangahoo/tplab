@@ -24,7 +24,7 @@
         <br>
         <br>
 
-        <div class="card-body" style="color:#e8e7e3">
+        <div class="card-body" style="white-space: pre-wrap; color:#e8e7e3">
                 {{ $post->body }}
         </div>
 
