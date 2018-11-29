@@ -7,7 +7,7 @@
 
     <hr>
 
-    {{ Form::model($post, ['route' => ['post.update', $post->id], 'method' => 'PUT']) }}
+    {{ Form::model($post, ['route' => ['post.update', $post->id], 'method' => 'PUT', 'enctype'=>'multipart/form-data']) }}
         {{ csrf_field() }}
         <div class="form-group">
             <label for="title">Título:</label>

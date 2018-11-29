@@ -90,17 +90,27 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $post = Post::find($id);
+
+        $pathOld = null;
+
+        if($post->file){
+            $pathOld = $post->file;
+        }
         
         $post->fill($request->all())->save();
         
-        //Acá está el código con el que debería guardarse, pero me tira error de permisos.
-        /*
+        //Acá está el código con el que debería guardarse
+        
         if($post->file){
             $path = Storage::disk('public')->put('images', $post->file);
-            
             $post->fill(['file' => asset('storage/' . $path)])->save();
         }
-        */
+
+        if($pathOld){
+            $shortPath = substr ( $pathOld , 29);
+            $delete = Storage::disk('public')->delete($shortPath);
+        }
+        
 
         return redirect()->route('post.index', $post->id);
 
@@ -114,8 +124,19 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        $post = Post::find($id)->delete();
+        $post = Post::find($id);
+
+        if($post->file){
+            $path = $post->file;
+        }
         
+        $post->delete();
+
+        if($post->file){
+            $shortPath = substr ( $path , 29);
+            $delete = Storage::disk('public')->delete($shortPath);
+        }
+
         return back();
     }
 }
