@@ -11,15 +11,15 @@
         {{ csrf_field() }}
         <div class="form-group">
             <label for="title">Título:</label>
-            <input type="text" class="form-control" id="title" name="title" value="{{ $post->title }}">
+            <input type="text" class="form-control" id="title" name="title" value="{{ $post->title }}" required>
         </div>
         <div class="form-group">
                 <label for="file">Imágen:</label>
-                <input type="file" class="form-control" id="file" name="file">
+                <input type="file" class="form-control" id="file" name="file" required>
             </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Contenido</label>
-            <textarea id="body" class="form-control" name="body" style="height:400px">{{ $post->body }}</textarea>
+            <textarea id="body" class="form-control" name="body" style="height:400px" required>{{ $post->body }}</textarea>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary" style="background-color: #08538c">Publicar</button>

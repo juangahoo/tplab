@@ -17,7 +17,7 @@
         <br>
         @if ($post->file)
 
-        <img class="card-img" src="{{ $post->file }}" alt="imagen del post">
+        <img class="card-img" src="{{ $post->file }}" alt="imagen del post" style="max-height:80%; max-width:700px">
             
         @endif
 

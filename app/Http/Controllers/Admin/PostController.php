@@ -89,6 +89,12 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate(request(), [
+            'title' => 'required', 
+            'body' => 'required',
+            'file' => 'required'
+        ]);
+        
         $post = Post::find($id);
 
         $pathOld = null;

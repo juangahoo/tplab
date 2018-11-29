@@ -31,11 +31,9 @@ class PostsController extends Controller
         $this->validate(request(), [
             'title' => 'required', 
             'body' => 'required',
-            'file' => 'nullable'
+            'file' => 'required'
         ]);
        
-        
-
         auth()->user()->publish(
             new Post(request(['title', 'body', 'file']))
         );
